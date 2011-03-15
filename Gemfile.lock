@@ -1,0 +1,11 @@
+GEM
+  specs:
+    compass (0.10.6)
+      haml (>= 3.0.4)
+    haml (3.0.25)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  compass

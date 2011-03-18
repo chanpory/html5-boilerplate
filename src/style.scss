@@ -16,3 +16,139 @@
 @include html5-boilerplate-reset;
 @include html5-boilerplate-fonts;
 @include html5-boilerplate-styles;
+
+@include oo-grid;
+@include oo-template;
+
+// ===============================================================
+// Basic Page Template
+// ===============================================================
+
+
+header, .main {
+  display:table-cell;
+  float: none;
+}
+
+header:after, .main:after {
+  @include oo-clearfix;
+}
+
+aside {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+footer {
+  overflow: auto;
+}
+
+
+// ===============================================================
+// Debug
+// ===============================================================
+
+header {
+  background-color: rgba(50,100,200,.75);
+}
+
+.main {
+  background-color: rgba(0,150,50,.75);
+}
+
+aside {
+  background-color: rgba(250,200,10,.75);
+}
+
+footer {
+  background-color: rgba(255,100,200,.75);
+}
+
+// ===============================================================
+// Headings
+// ===============================================================
+
+/* .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
+h1, .h1{font-size:196%; font-weight:normal; font-style: normal; color:#AE0345;}
+h2, .h2{font-size:167%; font-weight:normal; font-style: normal; color:#AE0345;}
+h3, .h3{font-size:146.5%; font-weight:normal; font-style: normal; color:#DF2B72;}
+h4, .h4{font-size:123.1%; font-weight:normal; font-style: normal; color: #333;}
+h5, .h5{font-size:108%; font-weight:bold; font-style: normal; color:#AE0345;}
+h6, .h6{font-size:108%; font-weight:normal; font-style: italic; color:#333;}
+/* if additional headings are needed they should be created via additional classes, never via location dependant styling */
+.category{font-size:108%; font-weight:normal; font-style: normal; text-transform:uppercase; color: #333;}
+.category a{color: #333;}
+
+
+// ===============================================================
+// Spacing
+// ===============================================================
+
+h1, h2, h3, h4, h5, h6, ul, ol,dl, p,blockquote, .media {margin:10px;}
+h1, h2, h3, h4, h5, h6,img{padding-bottom:0px;}
+pre{margin: 10px;}
+table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, table ol, table dl{padding:0;}
+
+
+// ===============================================================
+// Objects
+// ===============================================================
+
+
+// Logo
+.logo {
+  float: left;
+}
+
+// Navigation:Bar
+.bar {
+  &:after {
+    @include oo-clearfix;
+  }
+  
+  li {
+    float: left;
+    
+    &:before{
+      content: "\b7"; 
+      margin: 0 .5em; 
+    }
+    
+    &:first-child:before{
+      display: none;
+    }
+  }
+}
+
+// Navigation:Menu
+.menu {
+  li {
+    margin-bottom: 1em;
+  }
+  
+  a {
+    display: block;
+  }
+}
+
+// Form:Sign-In
+.sign-in {
+}
+
+// Form:Registration
+.registration {
+
+}
+
+
+// Media
+.media {
+
+}
+
+ 
+// =============================================================== //
+// Skins

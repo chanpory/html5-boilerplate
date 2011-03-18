@@ -9,13 +9,10 @@
 // HTML 5 Boilerplate SASS mix-ins created by sporkd
 // - github.com/sporkd/compass-html5-boilerplate
 
-@import "html5-boilerplate/reset";
-@import "html5-boilerplate/fonts";
-@import "html5-boilerplate/styles";
-@import "html5-boilerplate/helpers";
-@import "html5-boilerplate/media";
+
+@import "html5-boilerplate/all";
+@import "oo-css/all";
 
 @include html5-boilerplate-reset;
 @include html5-boilerplate-fonts;
 @include html5-boilerplate-styles;
-@include html5-boilerplate-helpers;

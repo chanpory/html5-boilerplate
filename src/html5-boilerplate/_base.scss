@@ -61,7 +61,6 @@ $list-left-margin: 1.8em !default;
 @mixin quoted-pre {
   pre {
     white-space: pre; white-space: pre-wrap; white-space: pre-line; word-wrap: break-word;
-    padding: 15px;
   }
 }
 

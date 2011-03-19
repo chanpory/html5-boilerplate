@@ -9,90 +9,91 @@
 // HTML 5 Boilerplate SASS mix-ins created by sporkd
 // - github.com/sporkd/compass-html5-boilerplate
 
+// ===============================================================
+// Setup basic styles
+// ===============================================================
 
+// == Import mixins ==
 @import "html5-boilerplate/all";
 @import "oo-css/all";
 
+// == Colors ==
+$font-color: #444; 
+$link-color: #607890;
+$link-hover-color: #036;
+$link-active-color: #607890;
+$link-visited-color: #607890;
+$selected-font-color: #000;
+$selected-background-color: #e7fac3;
+
+// == Spacing ==
+$list-left-margin: 1.8em;
+$default-margin: 10px; 
+
+// == Render mixins ==
 @include html5-boilerplate-reset;
-@include html5-boilerplate-fonts;
 @include html5-boilerplate-base;
-
+@include html5-boilerplate-fonts;
 @include oo-grid;
-@include oo-template;
 
-
-
-// ===============================================================
-// Basic Page Template
-// ===============================================================
-
-header, .main {
-  display:table-cell;
-  float: none;
-}
-
-header:after, .main:after {
-  @include oo-clearfix;
-}
-
-aside {
-  float: left;
-}
-
-.right {
-  float: right;
-}
-
-footer {
-  overflow: auto;
-}
-pre{margin: 10px; padding: 15px;}
-
-ul, ol {margin-left: $list-left-margin;}
-
-// ===============================================================
-// Debug
-// ===============================================================
-
-header {
-  background-color: rgba(50,100,200,.75);
-}
-
-.main {
-  background-color: rgba(0,150,50,.75);
-}
-
-aside {
-  background-color: rgba(250,200,10,.75);
-}
-
-footer {
-  background-color: rgba(255,100,200,.75);
-}
 
 // ===============================================================
 // Headings
 // ===============================================================
 
-/* .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings */
+// .h1-.h6 classes should be used to maintain the semantically appropriate heading levels - NOT for use on non-headings
 h1, .h1{font-size:196%; font-weight:normal; font-style: normal; color:#AE0345;}
 h2, .h2{font-size:167%; font-weight:normal; font-style: normal; color:#AE0345;}
 h3, .h3{font-size:146.5%; font-weight:normal; font-style: normal; color:#DF2B72;}
 h4, .h4{font-size:123.1%; font-weight:normal; font-style: normal; color: #333;}
 h5, .h5{font-size:108%; font-weight:bold; font-style: normal; color:#AE0345;}
 h6, .h6{font-size:108%; font-weight:normal; font-style: italic; color:#333;}
-/* if additional headings are needed they should be created via additional classes, never via location dependant styling */
-.category{font-size:108%; font-weight:normal; font-style: normal; text-transform:uppercase; color: #333;}
-.category a{color: #333;}
 
 
 // ===============================================================
 // Spacing
 // ===============================================================
-
-h1, h2, h3, h4, h5, h6, ul, ol,dl, p,blockquote, .media {margin:10px;}
+$list-left-margin: 1.8em;
+h1, h2, h3, h4, h5, h6, ul, ol, dl, p, blockquote, pre, .media {margin: $default-margin;}
+p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 { margin-top: $default-margin * 2; }
 h1, h2, h3, h4, h5, h6,img{padding-bottom:0px;}
-table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, table ol, table dl{padding:0;}
+pre {padding: 15px;}
+table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, table ol, table dl {padding:0;}
+ul, ol {margin-left: $list-left-margin;}
+
+// ===============================================================
+// Page Template
+// ===============================================================
+
+.page           {margin:0 auto;width:960px;} /* wraps other template elems to set width */
+.liquid         {width:auto; margin:0;}
+.widescreen     {width:1080px;}
+
+.body,
+.main           {*zoom:1;}
+
+ header, 
+.main           {display:table-cell; *display:block; width:auto; float: none;}
+
+header:after,
+.body:after, 
+.main:after     {@include oo-clearfix;}
+
+aside, 
+.left           {float: left;}
+
+.right          {float: right;}
+footer          {overflow:hidden; display: block;}
+
+
+// ===============================================================
+// Debug
+// ===============================================================
+
+header          {background-color: rgba(50,100,200,.75);}
+.main           {background-color: rgba(0,150,50,.75);}
+aside           {background-color: rgba(250,200,10,.75);}
+footer          {background-color: rgba(255,100,200,.75);}
 
 
 // ===============================================================
@@ -125,7 +126,7 @@ table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, tab
   }
 }
 
-// Navigation:Menu
+// == Navigation:Menu ==
 .menu {
   li {
     margin-bottom: 1em;

@@ -100,12 +100,12 @@ table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, tab
 // ===============================================================
 
 
-// Logo
+// == Logo ==
 .logo {
   float: left;
 }
 
-// Navigation:Bar
+// == Navigation:Bar ==
 .bar {
   &:after {
     @include oo-clearfix;
@@ -136,21 +136,22 @@ table h1,table h2,table h3, table h4, table h5, table h6, table p, table ul, tab
   }
 }
 
-// Form:Sign-In
+// === Form:Sign-In ===
 .sign-in {
 }
 
-// Form:Registration
+// == Form:Registration ==
 .registration {
 
 }
 
 
-// Media
+// ==  Media ==
 .media {
 
 }
 
  
-// =============================================================== //
+// ===============================================================
 // Skins
+// ===============================================================

@@ -11,7 +11,7 @@ $list-left-margin: 1.8em !default;
 // Minimal base styles
 //
 
-@mixin html5-boilerplate-styles {
+@mixin html5-boilerplate-base {
   html { @include force-scrollbar; }
 
   ul, ol { margin-left: $list-left-margin; list-style-type:none;}

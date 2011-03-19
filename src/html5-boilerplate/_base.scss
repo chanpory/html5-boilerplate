@@ -14,7 +14,7 @@ $list-left-margin: 1.8em !default;
 @mixin html5-boilerplate-base {
   html { @include force-scrollbar; }
 
-  ul, ol { margin-left: $list-left-margin; list-style-type:none;}
+  ul, ol {list-style-type:none;}
   ol { list-style-type: decimal; }
 
   td, td img { vertical-align: top; }
